@@ -8,12 +8,13 @@ $(document).ready(function(){
   var token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNTY2NTI3Mzg0LCJleHAiOjE1NjcxMzIxODR9.e-xT0Q2V9DLzPDnCDnRzeIECy872aXNeBNDWiqSxxYFOKHuFR14n6O1HNZqZLeef2ZSqDPatZDm4aMcy_Q5_HQ";
   $.ajax
     ({
-        type: "get",
-        url: 'http://localhost:8080/products/getall',
+        type: "post",
+        url: 'http://localhost:8080/login',
         dataType: 'json',
         async: false,
 		contentType: 'application/json',
-        headers: { "Authorization": 'Bearer ' + token },
+        //headers: { "Authorization": 'Bearer ' + token },
+        data: JSON.stringify({username:'loda',password:'loda'}),
         success: function () {
         alert("Thanks!"); 
         }

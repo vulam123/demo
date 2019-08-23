@@ -12,6 +12,7 @@ public class ApiExceptionHandler {
 	@ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleAllException(Exception ex, WebRequest request) {
         // quá trình kiểm soat lỗi diễn ra ở đây
+		System.out.println(ex);
 		return new ResponseEntity<>("Something happend", HttpStatus.NOT_FOUND);
     }
 
